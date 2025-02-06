@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Porsche 911 Models{% endblock %}
+
+{% block content %}
+<h1>Porsche 911 Models</h1>
+<p>Explore the iconic Porsche 911 models, known for their exceptional design, performance, and engineering.</p>
+
+<div class="model-list">
+    {% for model in models %}
+    <div class="model-card">
+        <img src="{{ model.image.url }}" alt="{{ model.name }}">
+        <h2><a href="{% url 'model_detail' model.name %}">{{ model.name }}</a></h2>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

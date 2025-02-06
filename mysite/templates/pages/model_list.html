@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Porsche 911 Models{% endblock %}
+
+{% block content %}
+<h1>Porsche 911 Models</h1>
+<p>Explore the iconic Porsche 911 models, known for their exceptional design, performance, and engineering.</p>
+
+<div class="models">
+    {% for model in models %}
+        <div class="model">
+            <h2><a href="{% url 'model_detail' model.id %}">{{ model.name }}</a></h2>
+            <p>{{ model.description|truncatewords:20 }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ model.name }}{% endblock %}
+
+{% block content %}
+<h1>{{ model.name }}</h1>
+<img src="{{ model.image.url }}" alt="{{ model.name }}" style="width:300px; height:auto;">
+<p>{{ model.description }}</p>
+<a href="{% url 'models' %}">Back to Models</a>
+{% endblock %}
