@@ -1,1 +1,1 @@
-# simple_portfolio
+Yusuf Arca Cicek - 97290
